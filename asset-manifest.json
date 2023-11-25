@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/novel-nook/static/css/main.518f98a1.css",
+    "main.js": "/novel-nook/static/js/main.70f247d8.js",
+    "index.html": "/novel-nook/index.html",
+    "main.518f98a1.css.map": "/novel-nook/static/css/main.518f98a1.css.map",
+    "main.70f247d8.js.map": "/novel-nook/static/js/main.70f247d8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.518f98a1.css",
+    "static/js/main.70f247d8.js"
+  ]
+}
