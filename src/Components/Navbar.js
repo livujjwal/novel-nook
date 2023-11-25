@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {
   FaBell,
-  FaBook,
   FaBookOpen,
   FaHeart,
   FaSearch,
@@ -14,8 +13,13 @@ import { fetch_data } from "../redux/action/fetchAction";
 const Navbar = () => {
   const dispatch = useDispatch();
   const [query, setQuery] = useState("");
+
   function handleQuery() {
-    dispatch(fetch_data(query));
+      console.log(query);
+    if (query) {
+      dispatch(fetch_data(query));
+      setQuery("");
+    }
   }
   return (
     <div className="navbar">
@@ -28,11 +32,12 @@ const Navbar = () => {
         <div>
           <FaSearch />
         </div>
-
         <input
           type="text"
           placeholder={`Search for the book you want and read it now... `}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => {
+            setQuery(e.target.value);
+          }}
           value={query}
         />
         <button onClick={handleQuery}>Search</button>

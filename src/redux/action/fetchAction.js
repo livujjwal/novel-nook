@@ -19,9 +19,10 @@ export const fetch_error = (error) => {
   };
 };
 
-export const fetch_data = ( query) => {
+export const fetch_data = (query) => {
   return async function (dispatch) {
     try {
+        console.log(query);
       dispatch(fetching());
       const response = await axios.get(
         `https://www.googleapis.com/books/v1/volumes?q=${query}`
